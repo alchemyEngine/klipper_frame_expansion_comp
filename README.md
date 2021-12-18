@@ -15,7 +15,7 @@ Copy the `frame_expansion_compensation.py` module to the Klippy extras folder:
 ```bash
 cp /home/pi/klipper_frame_expansion_comp/frame_expansion_compensation.py /home/pi/klipper/klippy/extras/
 ```
-## [Optional] Configure Moonraker Updates
+### [Optional] Configure Moonraker Updates
 Run the install shell script:
 ```bash
 bash /home/pi/klipper_frame_expansion_comp/install.sh
@@ -37,7 +37,7 @@ install_script: install.sh
 #   temp_coeff of 0.01 mm/K will move the Z axis downwards by 0.01 mm for every
 #   Kelvin/degree celcius that the frame temperature increases. Defaults to 0.0,
 #   no offset.
-#temp_sensor:
+temp_sensor:
 #   Temperature sensor to use for frame temp measurement. Use full config
 #   section name without quoutes. E.g. temperature_sensor frame
 #smooth_time:
