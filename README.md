@@ -25,6 +25,7 @@ Configure the update manager. Add the following section to `moonraker.conf`:
 [update_manager client frame_expansion]
 type: git_repo
 path: /home/pi/klipper_frame_expansion_comp
+primary_branch: main
 origin: https://github.com/alchemyEngine/klipper_frame_expansion_comp.git
 install_script: install.sh
 ```
