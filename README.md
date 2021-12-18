@@ -60,8 +60,8 @@ z_stepper:
 ## G-Code Commands
 The following commands are available when the frame_expansion_compensation config section is enabled:
 
-- SET_FRAME_COMP ENABLE=[<0:1>]: enable or disable frame expansion compensation. When disabled, the last computed compensation value will remain applied until next homing.
-- QUERY_FRAME_COMP: report current state and key parameters of the frame expansion compensation.
+- **SET_FRAME_COMP ENABLE=[<0:1>]**: enable or disable frame expansion compensation. When disabled, the last computed compensation value will remain applied until next homing.
+- **QUERY_FRAME_COMP**: report current state and key parameters of the frame expansion compensation.
 
 
 ## Overview
