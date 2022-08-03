@@ -21,33 +21,16 @@ link_extension()
     ln -sf "${SRCDIR}/frame_expansion_compensation.py" "${KLIPPER_PATH}/klippy/extras/frame_expansion_compensation.py"
 }
 
-# Step 3: Install startup script
-install_script()
+# Step 3: Remove old dummy system service
+remove_service()
 {
-# Create systemd service file
     SERVICE_FILE="${SYSTEMDDIR}/frame_expansion_compensation.service"
-    #[ -f $SERVICE_FILE ] && return
     if [ -f $SERVICE_FILE ]; then
+        echo -e "Removing system service..."
+        sudo service frame_expansion_compensation stop
+        sudo systemctl disable frame_expansion_compensation.service
         sudo rm "$SERVICE_FILE"
     fi
-
-    echo "Installing system start script..."
-    sudo /bin/sh -c "cat > ${SERVICE_FILE}" << EOF
-[Unit]
-Description=Dummy Service for frame_expansion_compensation plugin
-After=klipper.service
-[Service]
-Type=oneshot
-RemainAfterExit=yes
-ExecStart=/bin/bash -c 'exec -a frame_expansion_compensation sleep 1'
-ExecStopPost=/usr/sbin/service klipper restart
-TimeoutStopSec=1s
-[Install]
-WantedBy=multi-user.target
-EOF
-# Use systemctl to enable the systemd service script
-    sudo systemctl daemon-reload
-    sudo systemctl enable frame_expansion_compensation.service
 }
 
 # Step 4: restarting Klipper
@@ -82,5 +65,5 @@ done
 # Run steps
 verify_ready
 link_extension
-install_script
+remove_service
 restart_klipper
