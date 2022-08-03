@@ -11,15 +11,11 @@ Clone this repo into you home directory. For example:
 cd /home/pi
 git clone https://github.com/alchemyEngine/klipper_frame_expansion_comp
 ```
-Copy the `frame_expansion_compensation.py` module to the Klippy extras folder:
-```bash
-cp /home/pi/klipper_frame_expansion_comp/frame_expansion_compensation.py /home/pi/klipper/klippy/extras/
-```
-### [Optional] Configure Moonraker Updates
 Run the install shell script:
 ```bash
 bash /home/pi/klipper_frame_expansion_comp/install.sh
 ```
+### [Optional] Configure Moonraker Updates
 Configure the update manager. Add the following section to `moonraker.conf`:
 ```config
 [update_manager client frame_expansion]
