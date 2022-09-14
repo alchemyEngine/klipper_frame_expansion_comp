@@ -211,7 +211,7 @@ class FrameExpansionCompensator:
             state = 'Inactive(Z>%.2f)' % self.max_comp_z
 
         if self.z_drift_offset == self.max_offset:
-            state += '(limited)' % self.max_offset
+            state += '(limited to %.2fmm)' % self.max_offset
 
         self.comp_state = state
 
