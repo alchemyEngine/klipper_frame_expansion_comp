@@ -1,3 +1,18 @@
+# **DEPRECATED!**
+**The [pull request](https://github.com/Klipper3d/klipper/pull/4157) for frame expansion compensation was merged into mainline
+Klipper on 2022.09.25 ([see commit](https://github.com/alchemyEngine/klipper_frame_expansion_comp.git)).**
+
+**This plug-in is therefore redundant and will no longer be maintained.**
+
+See the updated [config reference](https://www.klipper3d.org/Config_Reference.html#z_thermal_adjust)
+and [g-code](https://www.klipper3d.org/G-Codes.html#z_thermal_adjust) docs to
+update your config/macros to the `[Z_THERMAL_ADJUST]` module.
+
+See also: updated [status reference](https://www.klipper3d.org/Status_Reference.html#z_thermal_adjust).
+
+-----------------
+-----------------
+
 # Frame Expansion Compensation
 A Moonraker plug-in for real-time compensation of frame thermal expansion.
 
@@ -59,7 +74,3 @@ The following commands are available when the frame_expansion_compensation confi
 
 - **SET_FRAME_COMP ENABLE=[<0:1>]**: enable or disable frame expansion compensation. When disabled, the last computed compensation value will remain applied until next homing.
 - **QUERY_FRAME_COMP**: report current state and key parameters of the frame expansion compensation.
-
-
-## Overview
-TODO
