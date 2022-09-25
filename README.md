@@ -1,6 +1,6 @@
 # **DEPRECATED!**
 **The [pull request](https://github.com/Klipper3d/klipper/pull/4157) for frame expansion compensation was merged into mainline
-Klipper on 2022.09.25 ([see commit](https://github.com/alchemyEngine/klipper_frame_expansion_comp.git)).**
+Klipper on 2022.09.25 ([see commit](https://github.com/Klipper3d/klipper/commit/34870d3e2a6232d36b53756d24beaf4491cfbdb8)).**
 
 **This plug-in is therefore redundant and will no longer be maintained.**
 
