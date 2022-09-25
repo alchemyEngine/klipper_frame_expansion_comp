@@ -10,6 +10,8 @@ update your config/macros to the `[Z_THERMAL_ADJUST]` module.
 
 See also: updated [status reference](https://www.klipper3d.org/Status_Reference.html#z_thermal_adjust).
 
+TO-DO: Migration guide :)
+
 -----------------
 -----------------
 
