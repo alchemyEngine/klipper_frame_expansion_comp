@@ -70,15 +70,14 @@ class FrameExpansionCompensator:
         self.toolhead = self.printer.lookup_object('toolhead')
         gcode_move = self.printer.lookup_object('gcode_move')
 
-        _warn_msg = '''HEY! YOU!
-        The Klipper FRAME_EXPANSION_COMPENSATION plug-in has been merged into
-        mainline Klipper as of 2022/09/25. It is available through the
-        Z_THERMAL_ADJUST module. This plug-in will therefore no longer be
-        maintained. Please use Z_THERMAL_ADJUST going forward.
-        
-        For links and more info see the README at:
-        https://github.com/alchemyEngine/klipper_frame_expansion_comp
-        '''
+        _warn_msg = ("HEY! YOU!\n"
+        'The Klipper FRAME_EXPANSION_COMPENSATION plug-in has been merged into '
+        'mainline Klipper as of 2022/09/25. It is available through the '
+        'Z_THERMAL_ADJUST module.\nThis plug-in will therefore no longer be '
+        'maintained. Please use Z_THERMAL_ADJUST going forward.\n'
+        '\n'
+        'For links and more info see the README at: '
+        'https://github.com/alchemyEngine/klipper_frame_expansion_comp')
         self.gcode.respond_info(_warn_msg, log=False)
 
         # Detect old temp sensor config section
